@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Work+Sans:wght@300;400;500;600;700&family=Archivo+Condensed:wght@400;500;600;700&family=Mrs+Sheppards&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +9,10 @@
 
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --font-brand-accent: "Mrs Sheppards", cursive;
+  --font-brand-display: "Archivo Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-brand-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 @utility neo-shadow {

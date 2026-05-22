@@ -64,13 +64,44 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Legal & Credits */}
+        {/* Legal & Credits & Developer Tools */}
         <div className="space-y-6">
           <div className="space-y-4">
             <h3 className="font-display font-bold uppercase text-xl border-b-2 border-black inline-block pb-1">Legal</h3>
             <ul className="space-y-2">
               <li><Link to="/privacy" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Privacy Policy</Link></li>
               <li><Link to="/contact" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Terms of Service</Link></li>
+            </ul>
+          </div>
+          <div className="space-y-4 pt-4 border-t-2 border-black/10">
+            <h3 className="font-display font-bold uppercase text-xl border-b-2 border-black inline-block pb-1">Developer</h3>
+            <ul className="space-y-2">
+              <li>
+                <button 
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    try {
+                      const res = await fetch('/alberto-app-source.zip');
+                      if (!res.ok) throw new Error('Network response was not ok');
+                      const blob = await res.blob();
+                      const url = window.URL.createObjectURL(blob);
+                      const a = document.createElement('a');
+                      a.href = url;
+                      a.download = 'alberto-app-source.zip';
+                      document.body.appendChild(a);
+                      a.click();
+                      window.URL.revokeObjectURL(url);
+                      document.body.removeChild(a);
+                    } catch (err) {
+                      console.error('Download failed:', err);
+                      window.open('/alberto-app-source.zip', '_blank');
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 bg-primary text-white hover:bg-black font-bold px-4 py-2 border-2 border-black neo-shadow-sm transition-all hover:translate-x-1"
+                >
+                  Download Source ZIP
+                </button>
+              </li>
             </ul>
           </div>
         </div>

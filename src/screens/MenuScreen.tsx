@@ -15,11 +15,11 @@ export default function MenuScreen() {
       <section className="px-4 py-8 md:py-16 relative overflow-hidden border-b-4 border-black bg-white">
         <div className="flex flex-col md:flex-row md:items-center gap-8">
           <div className="space-y-4 relative z-10 flex-1">
-            <div className="inline-block bg-secondary text-black font-display font-bold px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2 transform uppercase tracking-widest text-xs">
+            <h2 className="inline-block bg-secondary text-black font-brand-display font-bold px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2 transform uppercase tracking-widest text-xs">
               COMFORT CRAFTED
-            </div>
-            <h1 className="font-display text-5xl md:text-7xl font-black text-primary uppercase leading-none mt-4">Our Menu</h1>
-            <p className="font-sans text-base md:text-xl max-w-lg">
+            </h2>
+            <h1 className="font-brand-accent text-6xl md:text-8xl text-primary mt-4 py-2 drop-shadow-sm">Our Menu</h1>
+            <p className="font-brand-sans text-base md:text-lg lg:text-xl font-medium max-w-lg mt-4">
               Experience the energy of bold spices and slow-cooked comfort infused into every bite. Alberto's brings Neo-Brutalist aesthetics to Tex-Mex.
             </p>
           </div>
@@ -32,7 +32,7 @@ export default function MenuScreen() {
               />
             </div>
             <div className="absolute -bottom-2 -left-2 sm:-left-4 md:-left-8 bg-primary text-white p-3 md:p-6 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-6 transform z-10">
-              <p className="font-display font-bold leading-tight uppercase text-base md:text-xl whitespace-nowrap text-center">How About<br/>Them<br/>Fajita's!</p>
+              <p className="font-brand-display font-black leading-tight uppercase text-base md:text-xl whitespace-nowrap text-center">How About<br/>Them<br/>Fajita's!</p>
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@ function MenuCategory({ title, children, initialOpen = false }: { title: string,
         className="flex items-center gap-2 sm:gap-4 mb-4 md:mb-6 cursor-pointer select-none group"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h2 className="font-display text-xl sm:text-3xl font-bold text-tertiary uppercase leading-none transition-colors group-hover:text-primary">{title}</h2>
+        <h2 className="font-brand-display text-2xl sm:text-4xl font-bold text-tertiary uppercase leading-none transition-colors group-hover:text-primary">{title}</h2>
         <div className="flex-1 h-1 bg-black min-w-[1rem]"></div>
         <div className="border-2 border-black bg-white p-1 group-hover:bg-secondary transition-colors shrink-0">
           {isOpen ? <ChevronUp size={24} strokeWidth={2.5} /> : <ChevronDown size={24} strokeWidth={2.5} />}
@@ -87,15 +87,15 @@ function MenuItem({ title, description, price, imgSrc }: { title: string, descri
       {imgSrc && (
         <div className="aspect-[4/3] border-b-4 border-black overflow-hidden relative">
           <img className="w-full h-full object-cover" alt={title} src={imgSrc} />
-          <span className="absolute top-4 right-4 bg-secondary border-2 border-black px-3 py-1 font-display font-bold">{price}</span>
+          <span className="absolute top-4 right-4 bg-secondary border-2 border-black px-3 py-1 font-brand-display font-black text-lg">{price}</span>
         </div>
       )}
       <div className="p-4 flex-1 flex flex-col">
         <div className="flex justify-between items-start gap-4 mb-2">
-          <h3 className="font-display text-xl font-bold text-black uppercase leading-tight">{title}</h3>
-          {!imgSrc && <span className="font-display font-bold text-primary text-xl whitespace-nowrap">{price}</span>}
+          <h3 className="font-brand-sans text-lg font-bold text-black uppercase leading-tight tracking-tight">{title}</h3>
+          {!imgSrc && <span className="font-brand-display font-black text-primary text-2xl whitespace-nowrap">{price}</span>}
         </div>
-        {description && <p className="font-sans text-sm text-stone-600 flex-1 mb-4">{description}</p>}
+        {description && <p className="font-brand-sans text-sm text-stone-600 font-medium flex-1 mb-4">{description}</p>}
         {/*
         <button className="mt-auto w-full bg-primary text-white border-2 border-black py-3 font-display font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none transition-all uppercase">
           ADD TO ORDER

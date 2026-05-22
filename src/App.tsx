@@ -248,13 +248,20 @@ function FloatingActionMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const isDraggingRef = useRef(false);
+  const openedViaHoldRef = useRef(false);
   const startCoords = useRef({ x: 0, y: 0 });
 
   const startPress = (e: React.PointerEvent) => {
     isDraggingRef.current = false;
+    openedViaHoldRef.current = false;
     startCoords.current = { x: e.clientX, y: e.clientY };
+    
+    // If it's already open, clicking it should just close it without doing the timer.
+    if (isOpen) return;
+
     timerRef.current = setTimeout(() => {
       setIsOpen(true);
+      openedViaHoldRef.current = true;
       if (window.navigator?.vibrate) window.navigator.vibrate(50);
     }, 450);
   };
@@ -273,32 +280,65 @@ function FloatingActionMenu() {
   const endPress = () => {
     if (timerRef.current) clearTimeout(timerRef.current);
     if (isOpen) {
-      setIsOpen(false);
+      if (!openedViaHoldRef.current) {
+        setIsOpen(false);
+      }
     } else if (!isDraggingRef.current) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+    // Reset after a tiny delay so the click event doesn't immediately toggle it back if handled separately
+    setTimeout(() => {
+      openedViaHoldRef.current = false;
+    }, 50);
   };
 
+  // Radius for the arc
+  const arcRadius = 90;
+
   return (
-    <div className="fixed bottom-24 right-4 z-[90] flex flex-col items-end gap-3 pointer-events-none">
+    <div className="fixed bottom-24 right-4 z-[90] flex items-center justify-center w-16 h-16 pointer-events-none">
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.8 }}
-            className="flex flex-col gap-3 pointer-events-auto"
-          >
-             <Link to="/menu" onClick={() => setIsOpen(false)} className="bg-white border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-secondary transition-colors" title="Menu">
-               <Utensils size={24} strokeWidth={2.5} className="text-black" />
-             </Link>
-             <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="bg-primary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-primary/90 transition-colors" title="Order Online">
-               <Car size={24} strokeWidth={2.5} className="text-white" />
-             </a>
-             <a href="tel:4322672310" onClick={() => setIsOpen(false)} className="bg-tertiary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-tertiary/90 transition-colors" title="Call Us">
-               <Phone size={24} strokeWidth={2.5} className="text-white" />
-             </a>
-          </motion.div>
+          <>
+            {/* Order Online */}
+            <motion.div
+              initial={{ opacity: 0, x: 0, y: 0, scale: 0.5 }}
+              animate={{ opacity: 1, x: 0, y: -arcRadius, scale: 1 }}
+              exit={{ opacity: 0, x: 0, y: 0, scale: 0.5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="absolute pointer-events-auto"
+            >
+              <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="bg-primary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-primary/90 transition-colors" title="Order Online">
+                <Car size={24} strokeWidth={2.5} className="text-white" />
+              </a>
+            </motion.div>
+
+            {/* Menu */}
+            <motion.div
+              initial={{ opacity: 0, x: 0, y: 0, scale: 0.5 }}
+              animate={{ opacity: 1, x: -arcRadius * Math.sin(Math.PI / 4), y: -arcRadius * Math.cos(Math.PI / 4), scale: 1 }}
+              exit={{ opacity: 0, x: 0, y: 0, scale: 0.5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.05 }}
+              className="absolute pointer-events-auto"
+            >
+              <Link to="/menu" onClick={() => setIsOpen(false)} className="bg-secondary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-secondary/90 transition-colors" title="Menu">
+                <Utensils size={24} strokeWidth={2.5} className="text-black" />
+              </Link>
+            </motion.div>
+
+            {/* Call Us */}
+            <motion.div
+              initial={{ opacity: 0, x: 0, y: 0, scale: 0.5 }}
+              animate={{ opacity: 1, x: -arcRadius, y: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 0, y: 0, scale: 0.5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
+              className="absolute pointer-events-auto"
+            >
+              <a href="tel:4322672310" onClick={() => setIsOpen(false)} className="bg-tertiary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-tertiary/90 transition-colors" title="Call Us">
+                <Phone size={24} strokeWidth={2.5} className="text-white" />
+              </a>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
 
@@ -308,7 +348,7 @@ function FloatingActionMenu() {
         onPointerLeave={cancelPress}
         onPointerMove={onPointerMove}
         onContextMenu={(e) => e.preventDefault()}
-        className="bg-white border-4 border-black w-16 h-16 rounded-full neo-shadow flex items-center justify-center active-press transition-all p-2 overflow-hidden pointer-events-auto select-none"
+        className="bg-white border-4 border-black w-16 h-16 rounded-full neo-shadow flex items-center justify-center active-press transition-all p-2 overflow-hidden pointer-events-auto select-none relative z-10"
         title="Push for top, Hold for menu"
         style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
       >
