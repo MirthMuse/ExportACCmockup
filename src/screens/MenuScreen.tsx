@@ -7,8 +7,8 @@ export default function MenuScreen() {
   return (
     <main className="pb-32 max-w-6xl mx-auto">
       <SEO 
-        title="Menu | Alberto's Authentic Tex-Mex" 
-        description="Explore our menu of smash tacos, volcano burritos, and comfort classics. Authentic flavors with a bold twist."
+        title="Menu | Alberto's Crystal Cafe" 
+        description="Explore our menu of comfort classics, daily specials, and local favorites. Bold West Texas flavors."
         path="/menu"
       />
       {/* Hero Section */}
@@ -18,9 +18,16 @@ export default function MenuScreen() {
             <h2 className="inline-block bg-secondary text-black font-brand-display font-bold px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2 transform uppercase tracking-widest text-xs">
               COMFORT CRAFTED
             </h2>
-            <h1 className="font-brand-accent text-6xl md:text-8xl text-primary mt-4 py-2 drop-shadow-sm">Our Menu</h1>
+            <div className="flex flex-col items-start gap-2 mt-8 mb-6 -rotate-2 transform origin-left">
+              <h1 className="font-brand-display font-black uppercase text-[4.5rem] md:text-[7rem] leading-none tracking-tighter text-black bg-secondary px-4 py-1 border-4 border-black neo-shadow">
+                OUR
+              </h1>
+              <h1 className="font-brand-display font-black uppercase text-[4.5rem] md:text-[7rem] leading-none tracking-tighter text-white bg-primary px-4 py-1 border-4 border-black neo-shadow ml-8 md:ml-16">
+                MENU
+              </h1>
+            </div>
             <p className="font-brand-sans text-base md:text-lg lg:text-xl font-medium max-w-lg mt-4">
-              Experience the energy of bold spices and slow-cooked comfort infused into every bite. Alberto's brings Neo-Brutalist aesthetics to Tex-Mex.
+              Experience the energy of bold spices and slow-cooked comfort infused into every bite. Alberto's Crystal Cafe serves up West Texas flavor with Neo-Brutalist aesthetics.
             </p>
           </div>
           <div className="relative w-5/6 sm:w-2/3 md:w-full max-w-md mx-auto md:ml-auto md:mr-12 mt-8 md:mt-0 flex-1">

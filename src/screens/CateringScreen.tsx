@@ -6,8 +6,8 @@ export default function CateringScreen() {
   return (
     <main className="p-4 space-y-12 max-w-5xl mx-auto pb-32">
       <SEO 
-        title="Catering | Alberto's Authentic Tex-Mex for Events" 
-        description="Feed the whole squad with Alberto's catering. Authentic Tex-Mex packages for corporate events, parties, and weddings in Big Spring, TX."
+        title="Catering | Alberto's Crystal Cafe for Events" 
+        description="Feed the whole squad with Alberto's catering. Custom packages for corporate events, parties, and weddings in Big Spring, TX."
         path="/catering"
       />
       {/* Hero */}

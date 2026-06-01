@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Brand & Address */}
         <div className="space-y-6">
           <div className="inline-block bg-tertiary border-4 border-black p-2 neo-shadow -rotate-2">
-            <img src="/alberto text.png" alt="Alberto's Authentic Tex-Mex" className="h-10 md:h-12 object-contain" />
+            <img src="/alberto text.png" alt="Alberto's Crystal Cafe" className="h-10 md:h-12 object-contain" />
           </div>
           <div className="space-y-2">
             <p className="flex items-start gap-2">

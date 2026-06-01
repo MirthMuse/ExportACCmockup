@@ -5,7 +5,7 @@ export default function PrivacyPolicyScreen() {
   return (
     <main className="p-4 space-y-8 max-w-4xl mx-auto pb-32">
       <SEO 
-        title="Privacy Policy | Alberto's Authentic Tex-Mex" 
+        title="Privacy Policy | Alberto's Crystal Cafe" 
         description="Privacy policy and terms of online usage for Alberto's in Big Spring, Texas."
         path="/privacy"
       />

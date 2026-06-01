@@ -7,8 +7,8 @@ interface SEOProps {
 }
 
 export default function SEO({ 
-  title = "Alberto's | Authentic Tex-Mex in Big Spring, TX", 
-  description = "Authentic Tex-Mex restaurant in Big Spring, Texas. Serving fresh tacos, burritos, and local favorites since 1974.",
+  title = "Alberto's Crystal Cafe | Serving West Texas Since 1974", 
+  description = "Alberto's Crystal Cafe in Big Spring, Texas. Serving West Texas since 1974.",
   path = ""
 }: SEOProps) {
   const url = `https://albertos-big-spring.com${path}`; // Replace with actual domain later
@@ -16,7 +16,7 @@ export default function SEO({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "Alberto's",
+    "name": "Alberto's Crystal Cafe",
     "image": "https://albertos-big-spring.com/og-image.jpg",
     "url": "https://albertos-big-spring.com",
     "telephone": "+14322672310",
@@ -41,7 +41,7 @@ export default function SEO({
         "closes": "22:00"
       }
     ],
-    "servesCuisine": "Mexican, Tex-Mex",
+    "servesCuisine": "American, Mexican",
     "priceRange": "$",
     "hasMenu": "https://albertos-big-spring.com/menu"
   };
