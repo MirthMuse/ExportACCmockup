@@ -1,8 +1,14 @@
 # Brand Design Guidelines
 
 **Brand Fonts:**
-- **Mrs Sheppards** (Accent / Special Display)
+- **Space Grotesk** (Main Display / Headings) - bold, modern, and striking.
+- **Archivo Condensed** (Secondary Display / Accents) - variable weights.
 - **Open Sans** (Body / Primary Sans) - variable weights (e.g., 300, 400, 500, 600, 700)
-- **Archivo Condensed** (Headings / Secondary) - variable weights (e.g., 400, 500, 600, 700)
 
-*Note to AI:* Always prioritize these exact fonts when generating or modifying any UI components or styling for this project.
+**Iconography:**
+- Use standard `lucide-react` icons exactly as they are. DO NOT attempt to add custom dashes, wind lines, or custom SVGs over them.
+
+**Style / Theming:**
+- Adhere to the current Neo-brutalist aesthetics (harsh borders, high contrast colors, drop shadows without blur).
+
+*Note to AI:* Always prioritize these exact fonts and guidelines when generating or modifying any UI components or styling for this project.
