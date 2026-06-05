@@ -14,14 +14,14 @@ export default function CateringScreen() {
       <section className="relative mt-8 group">
         <div className="absolute inset-0 bg-primary border-4 border-black translate-x-3 translate-y-3 neo-shadow-lg"></div>
         <div className="relative bg-white border-4 border-black p-8 md:p-16 flex flex-col items-center text-center">
-          <div className="bg-secondary text-black px-4 py-2 border-2 border-black font-display font-bold uppercase text-sm mb-6 rotate-2">
+          <div className="bg-secondary text-black px-5 py-2.5 border-2 border-black font-display font-bold uppercase text-base mb-6 rotate-2">
             FEED THE WHOLE SQUAD
           </div>
           <h1 className="font-display text-5xl md:text-7xl font-black uppercase mb-6 leading-none tracking-tight">CHAOS ON<br />WHEELS</h1>
           <p className="font-sans text-xl md:text-2xl text-stone-600 max-w-2xl">
             Whether it's a corporate takeover or a backyard blowout, Alberto's brings the flavor that will have your guests talking for years.
           </p>
-          <button className="mt-10 bg-primary text-white border-4 border-black px-10 py-5 font-display font-bold text-xl uppercase neo-shadow hover:bg-tertiary transition-all active-press">
+          <button className="mt-10 bg-primary text-white border-4 border-black px-10 py-5 font-display font-bold text-xl uppercase neo-shadow hover:bg-tertiary transition-all active-press hover-jiggle">
               BOOK YOUR EVENT
           </button>
         </div>
@@ -76,10 +76,10 @@ export default function CateringScreen() {
           Fill out our inquiry form or call our catering hotline to customize your menu.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <button className="bg-black text-white px-8 py-4 font-display font-bold uppercase border-2 border-white hover:bg-neutral hover:text-black transition-all">
+          <button className="bg-black text-white px-8 py-4 font-display font-bold uppercase border-2 border-white hover:bg-neutral hover:text-black transition-all hover-jiggle">
             INQUIRY FORM
           </button>
-          <button className="bg-white text-black px-8 py-4 font-display font-bold uppercase border-2 border-black hover:bg-neutral transition-all">
+          <button className="bg-white text-black px-8 py-4 font-display font-bold uppercase border-2 border-black hover:bg-neutral transition-all hover-jiggle">
             (806) 555-0999
           </button>
         </div>
@@ -106,7 +106,7 @@ function PackageCard({ title, price, items, image }: { title: string, price: str
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="p-6 flex-1 flex flex-col relative">
-        <div className="absolute -top-6 right-6 bg-secondary border-2 border-black px-3 py-1 font-display font-bold text-sm rotate-2">
+        <div className="absolute -top-6 right-6 bg-secondary border-2 border-black px-4 py-2 font-display font-bold text-base rotate-2">
           {price}
         </div>
         <h3 className="font-display text-3xl font-bold uppercase mb-6 leading-none mt-2">{title}</h3>
@@ -118,7 +118,7 @@ function PackageCard({ title, price, items, image }: { title: string, price: str
             </li>
           ))}
         </ul>
-        <button className="w-full bg-tertiary text-white border-2 border-black py-4 font-display font-bold uppercase hover:bg-primary transition-all active-press">
+        <button className="w-full bg-tertiary text-white border-2 border-black py-4 font-display font-bold uppercase hover:bg-primary transition-all active-press hover-jiggle">
           SELECT PACKAGE
         </button>
       </div>

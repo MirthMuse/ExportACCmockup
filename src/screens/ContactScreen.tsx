@@ -1,4 +1,4 @@
-import { Navigation, QrCode, Star, Mail, Phone, MessageSquare, CheckCircle2, User, MailIcon, PhoneIcon } from "lucide-react";
+import { Navigation, QrCode, Star, Mail, Phone, MessageSquare, CheckCircle2, User, MailIcon, PhoneIcon, MapPin } from "lucide-react";
 import React, { useState } from "react";
 import SEO from "../components/SEO";
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -47,13 +47,30 @@ export default function ContactScreen() {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mb-12">
+        {/* Visit Us Box */}
+        <a 
+          href="https://maps.google.com/?q=Alberto's+Crystal+Cafe,+411+E+3rd+St,+Big+Spring,+TX+79720"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-tertiary text-white border-4 border-black p-8 md:p-12 neo-shadow-lg transition-all group hover:bg-primary hover-jiggle flex items-center justify-center"
+        >
+          <div className="flex flex-col items-center justify-center text-center">
+            <MapPin size={64} strokeWidth={2.5} className="mb-6 group-hover:scale-110 transition-transform" />
+            <h2 className="font-display text-4xl md:text-6xl font-black uppercase leading-none mb-4 tracking-tighter">VISIT US</h2>
+            <p className="font-sans text-xl md:text-2xl font-bold mb-6">411 E 3rd St<br/>Big Spring, TX 79720</p>
+            <span className="bg-secondary text-black font-display font-bold uppercase px-6 py-3 border-2 border-black text-sm tracking-widest group-hover:-translate-y-1 transition-transform neo-shadow">
+              Get Directions
+            </span>
+          </div>
+        </a>
+
         {/* The "Order Online" Box (Red one) */}
         <a 
           href="https://online.skytab.com/s/albertos"
           target="_blank"
           rel="noopener noreferrer"
-          className="block bg-primary text-white border-4 border-black p-8 md:p-12 neo-shadow-lg transition-all group hover:bg-tertiary"
+          className="block bg-primary text-white border-4 border-black p-8 md:p-12 neo-shadow-lg transition-all group hover:bg-tertiary hover-jiggle flex items-center justify-center"
         >
           <div className="flex flex-col items-center justify-center text-center">
             <QrCode size={64} strokeWidth={2.5} className="mb-6 group-hover:scale-110 transition-transform" />
@@ -61,23 +78,25 @@ export default function ContactScreen() {
             <p className="font-sans text-xl md:text-2xl font-bold">Skip the line and get your tacos now.</p>
           </div>
         </a>
+      </div>
 
+      <div className="max-w-3xl mx-auto">
         {/* The Rewards Box in the small boxt format */}
-        <div className="bg-white border-4 border-black p-6 neo-shadow relative group">
-          <div className="absolute -top-4 -right-2 bg-secondary border-2 border-black px-2 py-1 font-display font-normal text-xs rotate-[8deg] uppercase tracking-wider">
+        <div className="bg-white border-4 border-black p-6 md:p-12 neo-shadow-lg relative group">
+          <div className="absolute -top-4 -right-2 bg-secondary border-2 border-black px-3 py-1.5 font-display font-bold text-sm rotate-[8deg] uppercase tracking-wider">
               CRYSTAL CLUB
           </div>
           <div className="flex justify-between items-start mb-6">
             <div>
-              <h2 className="font-display text-2xl text-primary leading-none mb-2 font-normal uppercase">EARN REWARDS</h2>
-              <p className="font-sans text-base text-stone-500 uppercase">JOIN FOR EXCLUSIVE PERKS</p>
+              <h2 className="font-display text-3xl font-black text-primary leading-none mb-2 uppercase tracking-tighter">EARN REWARDS</h2>
+              <p className="font-sans text-lg font-bold text-stone-500 uppercase">JOIN FOR EXCLUSIVE PERKS</p>
             </div>
-            <div className="border-2 border-black px-3 py-1 font-sans text-sm uppercase bg-[#FFF521]">
+            <div className="border-2 border-black px-4 py-2 font-display font-bold text-xl uppercase bg-[#FFF521] rotate-2">
                 FREE
             </div>
           </div>
-          <div className="mb-8">
-            <p className="font-sans text-stone-900">Sign up with your phone and email to receive special offers, new menu updates, and free rewards.</p>
+          <div className="mb-8 border-b-4 border-black pb-8">
+            <p className="font-sans text-xl text-stone-900 font-bold">Sign up with your phone and email to receive special offers, new menu updates, and free rewards.</p>
           </div>
           <RewardSignupForm />
         </div>
@@ -92,7 +111,7 @@ function StoreCard({ title, address, distance, status, popular, info, googleLink
   return (
     <div className="bg-white border-4 border-black p-6 neo-shadow relative group">
       {popular && (
-        <div className="absolute -top-4 -right-2 bg-secondary border-2 border-black px-2 py-1 font-display font-normal text-xs rotate-[8deg] uppercase tracking-wider">
+        <div className="absolute -top-4 -right-2 bg-secondary border-2 border-black px-3 py-1.5 font-display font-bold text-sm rotate-[8deg] uppercase tracking-wider">
             MOST POPULAR
         </div>
       )}
@@ -111,7 +130,7 @@ function StoreCard({ title, address, distance, status, popular, info, googleLink
       </div>
       <div className="grid grid-cols-1 gap-4">
         {isOpen ? (
-          <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" className="block w-full bg-tertiary text-white border-2 border-black py-4 font-display font-normal hover:bg-secondary hover:text-black transition-all active-press uppercase text-lg text-center">
+          <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" className="block w-full bg-tertiary text-white border-2 border-black py-4 font-display font-normal hover:bg-secondary hover:text-black transition-all active-press hover-jiggle uppercase text-lg text-center">
               ORDER HERE
           </a>
         ) : (
@@ -124,7 +143,7 @@ function StoreCard({ title, address, distance, status, popular, info, googleLink
             href={googleLink} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-full bg-white text-black border-2 border-black py-4 font-display font-normal hover:bg-neutral transition-all active-press uppercase text-lg text-center"
+            className="w-full bg-white text-black border-2 border-black py-4 font-display font-normal hover:bg-neutral transition-all active-press hover-jiggle uppercase text-lg text-center"
           >
             VIEW ON GOOGLE MAPS
           </a>
@@ -174,7 +193,7 @@ function RewardSignupForm() {
         </p>
         <button 
           onClick={() => setIsSuccess(false)}
-          className="mt-8 bg-tertiary text-white border-4 border-black px-8 py-4 font-display font-bold uppercase transition-all shadow-none hover:bg-secondary hover:text-black neo-shadow"
+          className="mt-8 bg-tertiary text-white border-4 border-black px-8 py-4 font-display font-bold uppercase transition-all shadow-none hover:bg-secondary hover:text-black neo-shadow hover-jiggle"
         >
           SIGN UP ANOTHER PERSON
         </button>
@@ -248,7 +267,7 @@ function RewardSignupForm() {
         <button 
           type="submit" 
           disabled={isSubmitting}
-          className="w-full bg-tertiary text-white border-4 border-black py-4 font-display font-bold text-2xl uppercase neo-shadow hover:bg-secondary hover:text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4 active-press"
+          className="w-full bg-tertiary text-white border-4 border-black py-4 font-display font-bold text-2xl uppercase neo-shadow hover:bg-secondary hover:text-black transition-all disabled:opacity-50 disabled:cursor-not-allowed mt-4 active-press hover-jiggle"
         >
           {isSubmitting ? 'SIGNING UP...' : 'JOIN NOW'}
         </button>

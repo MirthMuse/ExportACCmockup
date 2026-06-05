@@ -1,4 +1,4 @@
-import { Info, Coffee, Users, History } from "lucide-react";
+import { Info, ChefHat, Users, History, Flame, Sprout, Sparkles, Heart } from "lucide-react";
 import React from "react";
 import SEO from "../components/SEO";
 
@@ -32,40 +32,52 @@ export default function AboutScreen() {
         />
 
         <AboutSection 
-          title="Our Mission"
+          title="Our Craft"
           icon={<Users size={32} strokeWidth={2.5} />}
-          content="We believe food is the ultimate connector. Alberto's isn't just a place to eat; it's a hub where people from all walks of life gather. From students to local workers, everyone finds a seat and a story at our table."
+          content="Every single person who sits down with us brings something unique to the table. They share a piece of themselves, and over the decades, those moments add up. Alberto's is a living record of those shared lives, and we take everything people have imprinted on us and pour it directly back into our food and our craft."
           image="https://images.unsplash.com/photo-1525648199074-cee30ba79a4a?q=80&w=800&auto=format&fit=crop"
           reverse={true}
         />
 
         <AboutSection 
-          title="Our Craft"
-          icon={<Coffee size={32} strokeWidth={2.5} />}
-          content="Every salsa, every spice blend, and every slice of meat is prepared with obsessive care. Our small-batch ranchero sauce is still made using Alberto's original 1974 recipe, ensuring every bite carries the weight of history."
+          title="Our Service"
+          icon={<ChefHat size={32} strokeWidth={2.5} />}
+          content={`We carry the responsibility of honoring those who built the foundation of Alberto's while protecting the table for the ones to come. For us, consistency is the standard, not a goal. It is a simple formula of responsive service, good food, and a welcoming experience, brought to life by the complex ingredient of "stories told throughout the land."`}
           image="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop"
           reverse={false}
         />
       </div>
 
-      {/* Values Staggered */}
-      <section className="mt-24 bg-tertiary border-4 border-black p-8 md:p-12 text-white neo-shadow-lg">
-        <h2 className="font-brand-display text-4xl font-bold uppercase mb-8 border-b-2 border-white pb-4">OUR VALUES</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="space-y-4">
-            <div className="bg-secondary text-black w-12 h-12 flex items-center justify-center border-2 border-black font-black text-2xl">1</div>
-            <h3 className="font-brand-display text-2xl font-bold uppercase">UNCOMPROMISING FLAVOR</h3>
-            <p className="font-brand-sans text-stone-200">If it isn't bold, it isn't Alberto's. We don't do bland.</p>
+      {/* The Secret Formula */}
+      <section className="mt-24 mb-12">
+        <div className="bg-primary border-4 border-black p-8 md:p-12 text-white neo-shadow-lg transform -rotate-1">
+          <h2 className="font-display text-5xl md:text-7xl font-black uppercase text-white mb-8 border-b-4 border-black pb-4 tracking-tighter">THE SECRET<br/>FORMULA</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div className="bg-white text-black border-4 border-black p-6 hover-jiggle neo-shadow transition-transform hover:-translate-y-2 group">
+              <Flame size={48} strokeWidth={2.5} className="mb-4 text-primary group-hover:scale-110 transition-transform" />
+              <h3 className="font-display text-2xl font-bold uppercase mb-2">Fire</h3>
+              <p className="font-sans font-bold text-stone-600">Bring the heat.</p>
+            </div>
+            
+            <div className="bg-secondary text-black border-4 border-black p-6 hover-jiggle neo-shadow transition-transform hover:-translate-y-2 group">
+              <Sprout size={48} strokeWidth={2.5} className="mb-4 text-tertiary group-hover:scale-110 transition-transform" />
+              <h3 className="font-display text-2xl font-bold uppercase mb-2">Fresh</h3>
+              <p className="font-sans font-bold text-stone-600">Locally untamed.</p>
+            </div>
+
+            <div className="bg-neutral text-black border-4 border-black p-6 hover-jiggle neo-shadow transition-transform hover:-translate-y-2 group">
+              <Sparkles size={48} strokeWidth={2.5} className="mb-4 text-black group-hover:scale-110 transition-transform" />
+              <h3 className="font-display text-2xl font-bold uppercase mb-2">Spice</h3>
+              <p className="font-sans font-bold text-stone-600">Cultivated curation.</p>
+            </div>
+
           </div>
-          <div className="space-y-4">
-            <div className="bg-secondary text-black w-12 h-12 flex items-center justify-center border-2 border-black font-black text-2xl">2</div>
-            <h3 className="font-brand-display text-2xl font-bold uppercase">FAMILY FIRST</h3>
-            <p className="font-brand-sans text-stone-200">Our employees and customers are family. We treat you like it.</p>
-          </div>
-          <div className="space-y-4">
-            <div className="bg-secondary text-black w-12 h-12 flex items-center justify-center border-2 border-black font-black text-2xl">3</div>
-            <h3 className="font-brand-display text-2xl font-bold uppercase">TEXAS ROOTS</h3>
-            <p className="font-brand-sans text-stone-200">Born in the West, serving the best of Texas spirit in every dish.</p>
+          
+          <div className="mt-12 flex justify-end">
+            <div className="inline-block bg-tertiary text-white px-8 py-4 font-display font-bold uppercase border-4 border-black text-xl neo-shadow transform rotate-2">
+              (And no, we won't share the ratios)
+            </div>
           </div>
         </div>
       </section>

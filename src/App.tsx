@@ -9,8 +9,8 @@ import MenuScreen from "./screens/MenuScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ContactScreen from "./screens/ContactScreen";
 import CateringScreen from "./screens/CateringScreen";
-
 import PrivacyPolicyScreen from "./screens/PrivacyPolicyScreen";
+import NotFoundScreen from "./screens/NotFoundScreen";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -28,6 +28,7 @@ export default function App() {
           <Route path="/about" element={<AboutScreen />} />
           <Route path="/contact" element={<ContactScreen />} />
           <Route path="/privacy" element={<PrivacyPolicyScreen />} />
+          <Route path="*" element={<NotFoundScreen />} />
         </Routes>
         <Footer />
         <FloatingActionMenu />
@@ -75,6 +76,7 @@ function TopBar({ onMenuClick }: { onMenuClick: () => void }) {
         </a>
         <button 
           onClick={onMenuClick}
+          aria-label="Toggle menu"
           className="text-black hover:bg-secondary transition-colors p-1 active:translate-y-0.5" 
           id="hamburger-menu-btn"
         >

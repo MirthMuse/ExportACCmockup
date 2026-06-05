@@ -12,13 +12,10 @@ export default function MenuScreen() {
         path="/menu"
       />
       {/* Hero Section */}
-      <section className="px-4 py-8 md:py-16 relative overflow-hidden border-b-4 border-black bg-white">
+      <section className="px-4 py-8 md:py-16 relative overflow-hidden border-b-4 border-black bg-[#F8F8F8]">
         <div className="flex flex-col md:flex-row md:items-center gap-8">
           <div className="space-y-4 relative z-10 flex-1">
-            <h2 className="inline-block bg-secondary text-black font-brand-display font-bold px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2 transform uppercase tracking-widest text-xs">
-              COMFORT CRAFTED
-            </h2>
-            <div className="flex flex-col items-start gap-2 mt-8 mb-6 -rotate-2 transform origin-left">
+            <div className="flex flex-col items-start gap-2 mb-6 -rotate-2 transform origin-left">
               <h1 className="font-brand-display font-black uppercase text-[4.5rem] md:text-[7rem] leading-none tracking-tighter text-black bg-secondary px-4 py-1 border-4 border-black neo-shadow">
                 OUR
               </h1>
@@ -26,12 +23,15 @@ export default function MenuScreen() {
                 MENU
               </h1>
             </div>
-            <p className="font-brand-sans text-base md:text-lg lg:text-xl font-medium max-w-lg mt-4">
+            <p className="font-brand-sans text-base md:text-lg lg:text-xl font-medium max-w-lg mt-4 mb-4">
               Experience the energy of bold spices and slow-cooked comfort infused into every bite. Alberto's Crystal Cafe serves up West Texas flavor with Neo-Brutalist aesthetics.
             </p>
+            <h2 className="inline-block bg-tertiary text-secondary font-brand-display font-bold px-5 py-2.5 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2 transform uppercase tracking-widest text-sm mt-2">
+              COMFORT CRAFTED
+            </h2>
           </div>
           <div className="relative w-5/6 sm:w-2/3 md:w-full max-w-md mx-auto md:ml-auto md:mr-12 mt-8 md:mt-0 flex-1">
-            <div className="border-4 border-black bg-white neo-shadow p-2 rotate-3 transform">
+            <div className="border-4 border-black bg-[#F8F8F8] neo-shadow p-2 rotate-3 transform">
               <img 
                 className="w-full aspect-[4/5] object-cover border-2 border-black" 
                 alt="Chicken Fajitas and Salsa" 
@@ -77,7 +77,7 @@ function MenuCategory({ title, children, initialOpen = false }: { title: string,
       >
         <h2 className="font-brand-display text-2xl sm:text-4xl font-bold text-tertiary uppercase leading-none transition-colors group-hover:text-primary">{title}</h2>
         <div className="flex-1 h-1 bg-black min-w-[1rem]"></div>
-        <div className="border-2 border-black bg-white p-1 group-hover:bg-secondary transition-colors shrink-0">
+        <div className="border-2 border-black bg-[#F8F8F8] p-1 group-hover:bg-secondary transition-colors shrink-0">
           {isOpen ? <ChevronUp size={24} strokeWidth={2.5} /> : <ChevronDown size={24} strokeWidth={2.5} />}
         </div>
       </div>
@@ -90,7 +90,7 @@ function MenuCategory({ title, children, initialOpen = false }: { title: string,
 
 function MenuItem({ title, description, price, imgSrc }: { title: string, description: string, price: string, imgSrc?: string, key?: React.Key }) {
   return (
-    <div className="bg-white border-4 border-black neo-shadow flex flex-col transition-all hover:-translate-y-1">
+    <div className="bg-[#F8F8F8] border-4 border-black neo-shadow flex flex-col transition-all hover:-translate-y-1">
       {imgSrc && (
         <div className="aspect-[4/3] border-b-4 border-black overflow-hidden relative">
           <img className="w-full h-full object-cover" alt={title} src={imgSrc} />
@@ -104,7 +104,7 @@ function MenuItem({ title, description, price, imgSrc }: { title: string, descri
         </div>
         {description && <p className="font-brand-sans text-sm text-stone-600 font-medium flex-1 mb-4">{description}</p>}
         {/*
-        <button className="mt-auto w-full bg-primary text-white border-2 border-black py-3 font-display font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none transition-all uppercase">
+        <button className="mt-auto w-full bg-primary text-white border-2 border-black py-3 font-display font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 active:shadow-none transition-all uppercase hover-jiggle">
           ADD TO ORDER
         </button>
         */}

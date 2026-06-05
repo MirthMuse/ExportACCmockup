@@ -26,7 +26,7 @@ export default function HomeScreen() {
             alt="Comanche Ribeye"
             src="/steak_ranchero_1200x.jpg"
           />
-          <div className="absolute top-4 left-4 bg-primary text-white border-2 border-black px-3 py-1 font-display font-bold uppercase text-xs rotate-3">
+          <div className="absolute top-4 left-4 bg-primary text-white border-2 border-black px-4 py-1.5 font-display font-bold uppercase text-sm rotate-3 tracking-wide">
             ITEM OF THE DAY
           </div>
         </div>
@@ -38,14 +38,14 @@ export default function HomeScreen() {
             A signature cut, fire-grilled, and smothered in Alberto's small-batch ranchero sauce. Crafting 5 decades of flavor into the staple dish of West Texas.
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
-            <span className="px-3 py-1 border-2 border-black bg-secondary font-display font-bold text-[10px] uppercase tracking-widest rotate-3">
+            <span className="px-4 py-1.5 border-2 border-black bg-secondary font-display font-bold text-xs uppercase tracking-widest rotate-3">
               SAVORY
             </span>
-            <span className="px-3 py-1 border-2 border-black bg-[#d5e3ff] font-display font-bold text-[10px] uppercase tracking-widest -rotate-3 text-[#004787]">
+            <span className="px-4 py-1.5 border-2 border-black bg-[#d5e3ff] font-display font-bold text-xs uppercase tracking-widest -rotate-3 text-[#004787]">
               HEARTY
             </span>
           </div>
-          <button className="w-full md:w-fit bg-primary text-white border-4 border-black px-8 py-4 font-display font-bold text-lg uppercase neo-shadow active-press transition-all">
+          <button className="w-full md:w-fit bg-primary text-white border-4 border-black px-8 py-4 font-display font-bold text-lg uppercase neo-shadow active-press hover-jiggle transition-all">
             GRAB THE CHAOS — $24.50
           </button>
         </div>
@@ -54,7 +54,7 @@ export default function HomeScreen() {
       {/* Quick Action Bento Grid */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Order Now */}
-        <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" className="bg-secondary border-4 border-black p-6 neo-shadow flex flex-col justify-between min-h-[220px] active-press transition-all cursor-pointer">
+        <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" className="bg-secondary border-4 border-black p-6 neo-shadow flex flex-col justify-between min-h-[220px] active-press hover-jiggle transition-all cursor-pointer">
           <div>
             <Utensils className="text-black mb-4" size={40} strokeWidth={2.5} />
             <h2 className="font-display text-3xl font-bold uppercase leading-none">ORDER<br />NOW</h2>
@@ -66,7 +66,7 @@ export default function HomeScreen() {
         </a>
         
         {/* View Menu */}
-        <Link to="/menu" className="bg-tertiary text-white border-4 border-black p-6 neo-shadow flex flex-col justify-between min-h-[220px] active-press transition-all cursor-pointer">
+        <Link to="/menu" className="bg-tertiary text-white border-4 border-black p-6 neo-shadow flex flex-col justify-between min-h-[220px] active-press hover-jiggle transition-all cursor-pointer">
           <div>
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" strokeLinejoin="miter" className="mb-4"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
             <h2 className="font-display text-3xl font-bold uppercase leading-none">VIEW<br />MENU</h2>
@@ -77,14 +77,14 @@ export default function HomeScreen() {
           </div>
         </Link>
 
-        {/* Find a Cafe */}
-        <Link to="/contact" className="bg-white border-4 border-black p-6 neo-shadow flex flex-col justify-between min-h-[220px] active-press transition-all cursor-pointer">
+        {/* Find Us */}
+        <Link to="/contact" className="bg-white border-4 border-black p-6 neo-shadow flex flex-col justify-between min-h-[220px] active-press hover-jiggle transition-all cursor-pointer">
           <div>
              <MapPin size={40} className="text-black mb-4" strokeWidth={2.5} />
-             <h2 className="font-display text-3xl font-bold uppercase leading-none">FIND A<br/>CAFE</h2>
+             <h2 className="font-display text-3xl font-bold uppercase leading-none">VISIT<br/>US</h2>
           </div>
           <div className="flex justify-between items-end mt-4">
-             <p className="font-display font-bold text-xs uppercase tracking-widest text-stone-500">12 Near You</p>
+             <p className="font-display font-bold text-xs uppercase tracking-widest text-stone-500">Big Spring, TX</p>
              <ArrowRight size={24} strokeWidth={2.5} />
           </div>
         </Link>
@@ -97,7 +97,7 @@ export default function HomeScreen() {
           <p className="text-white font-sans text-xl font-bold mb-4 uppercase tracking-widest text-center py-4">
             Coming Soon!
           </p>
-          <Link to="/contact" state={{ tab: 'rewards' }} className="bg-white border-2 border-black inline-block px-8 py-3 font-display font-bold text-xl uppercase neo-shadow text-black active-press">
+          <Link to="/contact" state={{ tab: 'rewards' }} className="bg-white border-2 border-black inline-block px-8 py-3 font-display font-bold text-xl uppercase neo-shadow text-black active-press hover-jiggle">
             SIGN UP FOR UPDATES
           </Link>
           <div className="absolute -top-6 -right-6 w-16 h-16 bg-secondary border-2 border-black rounded-full flex items-center justify-center -rotate-6">
