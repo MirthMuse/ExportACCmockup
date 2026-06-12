@@ -71,6 +71,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link to="/privacy" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Privacy Policy</Link></li>
               <li><Link to="/contact" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">Terms of Service</Link></li>
+              <li><Link to="/404" className="hover:text-primary hover:translate-x-1 inline-block transition-transform">404 Demo</Link></li>
             </ul>
           </div>
         </div>

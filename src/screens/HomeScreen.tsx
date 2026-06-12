@@ -18,36 +18,42 @@ export default function HomeScreen() {
         </p>
       </section>
 
-      {/* Hero: Item of the Day */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-0 border-4 border-black neo-shadow-lg bg-white overflow-hidden">
-        <div className="relative h-64 md:h-full overflow-hidden border-b-4 md:border-b-0 md:border-r-4 border-black">
-          <img
-            className="w-full h-full object-cover"
-            alt="Comanche Ribeye"
-            src="/steak_ranchero_1200x.jpg"
-          />
-          <div className="absolute top-4 left-4 bg-primary text-white border-2 border-black px-4 py-1.5 font-display font-bold uppercase text-sm rotate-3 tracking-wide">
-            ITEM OF THE DAY
+      {/* Hero: Video Spotlight */}
+      <section className="border-4 border-black neo-shadow-lg flex flex-col md:flex-row bg-white overflow-hidden relative mb-8">
+        <div className="relative w-full aspect-[4/5] md:w-[45%] lg:w-[40%] xl:w-[35%] border-b-4 md:border-b-0 md:border-r-4 border-black shrink-0 bg-stone-900 mx-auto md:mx-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/Alberto's To Be Served Opening.mp4" type="video/mp4" />
+          </video>
+          
+          <div className="absolute top-4 left-4 bg-tertiary text-white border-2 border-black px-4 py-1.5 font-display font-bold uppercase text-sm -rotate-2 tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] z-10">
+            A WEST TEXAS TRADITION
           </div>
         </div>
-        <div className="p-8 flex flex-col justify-center bg-white">
-          <h2 className="font-display text-3xl font-bold uppercase text-tertiary mb-2">
-            COMANCHE RIBEYE
-          </h2>
-          <p className="font-sans text-base mb-6 text-stone-600">
-            A signature cut, fire-grilled, and smothered in Alberto's small-batch ranchero sauce. Crafting 5 decades of flavor into the staple dish of West Texas.
-          </p>
-          <div className="flex flex-wrap gap-4 mb-8">
-            <span className="px-4 py-1.5 border-2 border-black bg-secondary font-display font-bold text-xs uppercase tracking-widest rotate-3">
-              SAVORY
-            </span>
-            <span className="px-4 py-1.5 border-2 border-black bg-[#d5e3ff] font-display font-bold text-xs uppercase tracking-widest -rotate-3 text-[#004787]">
-              HEARTY
-            </span>
+        
+        <div className="p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-center flex-1 z-10">
+          <div className="mb-6 md:mb-12 text-center md:text-left xl:pr-10">
+            <h2 className="font-display text-5xl min-[400px]:text-6xl md:text-7xl lg:text-8xl xl:text-[7rem] font-black uppercase text-black leading-none tracking-tight mb-3 md:mb-4 lg:mb-6">
+              PROVECHO!
+            </h2>
+            <p className="font-sans font-bold text-stone-600 uppercase tracking-widest text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+              IN SERVICE SINCE 1974
+            </p>
           </div>
-          <button className="w-full md:w-fit bg-primary text-white border-4 border-black px-8 py-4 font-display font-bold text-lg uppercase neo-shadow active-press hover-jiggle transition-all">
-            GRAB THE CHAOS — $24.50
-          </button>
+          
+          <div className="w-full flex justify-center md:justify-start">
+            <Link 
+              to="/about"
+              className="inline-block border-4 border-black bg-primary px-8 lg:px-10 py-3 lg:py-4 text-center font-display text-lg sm:text-xl lg:text-2xl font-black uppercase text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none sm:-rotate-1 sm:hover:rotate-1"
+            >
+              OUR STORY
+            </Link>
+          </div>
         </div>
       </section>
 
