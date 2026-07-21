@@ -11,14 +11,15 @@ export default function SEO({
   description = "Alberto's Crystal Cafe in Big Spring, Texas. Serving West Texas since 1974.",
   path = ""
 }: SEOProps) {
-  const url = `https://albertos-big-spring.com${path}`; // Replace with actual domain later
+  const url = `https://albertoscrystalcafe.com${path}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
+    "@type": ["Restaurant", "LocalBusiness"],
     "name": "Alberto's Crystal Cafe",
-    "image": "https://albertos-big-spring.com/og-image.jpg",
-    "url": "https://albertos-big-spring.com",
+    "image": "https://albertoscrystalcafe.com/og-image.jpg",
+    "logo": "https://albertoscrystalcafe.com/alberto-logo.webp",
+    "url": "https://albertoscrystalcafe.com",
     "telephone": "+14322672310",
     "address": {
       "@type": "PostalAddress",
@@ -62,14 +63,14 @@ export default function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="https://albertos-big-spring.com/og-image.jpg" />
+      <meta property="og:image" content="https://albertoscrystalcafe.com/og-image.jpg" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content="https://albertos-big-spring.com/og-image.jpg" />
+      <meta property="twitter:image" content="https://albertoscrystalcafe.com/og-image.jpg" />
 
       {/* Structured Data */}
       <script type="application/ld+json">

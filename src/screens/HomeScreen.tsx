@@ -29,7 +29,7 @@ export default function HomeScreen() {
               loop
               muted
               playsInline
-              poster="/steak_ranchero_1200x.jpg"
+              poster="/steak_ranchero_1200x.webp"
               className="absolute inset-0 w-full h-full object-cover"
             >
               <source src="/Alberto's To Be Served Opening.mp4" type="video/mp4" />

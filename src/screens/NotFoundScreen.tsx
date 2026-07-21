@@ -21,7 +21,7 @@ export default function NotFoundScreen() {
         
         <div className="relative z-10 flex flex-col items-center">
           <div className="w-32 h-32 bg-white border-4 border-black neo-shadow flex items-center justify-center -rotate-6 mb-8 hover-jiggle">
-            <img src="/alberto logo.png" alt="Alberto's Logo" className="w-24 h-24 object-contain" />
+            <img src="/alberto-logo.webp" alt="Alberto's Logo" className="w-24 h-24 object-contain" />
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl font-black uppercase text-white mb-4 tracking-tighter">LOST IN THE DESERT?</h1>

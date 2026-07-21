@@ -48,14 +48,14 @@ function TopBar({ onMenuClick }: { onMenuClick: () => void }) {
         <Link to="/" className="w-8 h-8 sm:w-10 sm:h-10 border-2 border-black overflow-hidden neo-shadow bg-white block transition-transform active:scale-95 shrink-0" id="user-profile-img-container">
           <img
             alt="Alberto Logo"
-            src="/alberto logo.png"
+            src="/alberto-logo.webp"
             className="w-full h-full object-cover p-0.5 sm:p-1"
           />
         </Link>
         <Link to="/" className="block transition-transform active:scale-95 min-w-0 shrink">
           <div className="flex items-center pb-0.5 sm:pb-0 h-8 sm:h-10">
             <img 
-              src="/alberto text.png" 
+              src="/alberto-text.webp" 
               alt="Alberto's Logo" 
               className="max-h-full max-w-full object-contain drop-shadow-[2px_2px_0_rgba(0,0,0,1)] object-left"
               onError={(e) => {
@@ -130,7 +130,7 @@ function MobileDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
           >
             <div className="flex justify-between items-center mb-8 shrink-0">
               <img 
-                src="/alberto text.png" 
+                src="/alberto-text.webp" 
                 alt="Alberto's Logo" 
                 className="h-[28px] object-contain drop-shadow-[2px_2px_0_rgba(0,0,0,1)]"
                 onError={(e) => {
@@ -361,7 +361,7 @@ function FloatingActionMenu() {
         {isOpen ? (
           <X size={28} strokeWidth={3} className="text-black" />
         ) : (
-          <img src="/alberto logo.png" alt="Back to top" className="w-full h-full object-cover pointer-events-none select-none" style={{ userSelect: 'none', pointerEvents: 'none' }} />
+          <img src="/alberto-logo.webp" alt="Back to top" className="w-full h-full object-cover pointer-events-none select-none" style={{ userSelect: 'none', pointerEvents: 'none' }} />
         )}
       </button>
     </div>
