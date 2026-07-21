@@ -29,10 +29,10 @@ export default function HomeScreen() {
               loop
               muted
               playsInline
-              poster="/steak_ranchero_1200x.webp"
+              poster="/albertos-crystal-cafe-at-sunrise.webp"
               className="absolute inset-0 w-full h-full object-cover"
             >
-              <source src="/Alberto's To Be Served Opening.mp4" type="video/mp4" />
+              <source src="/alberto-opening.mp4" type="video/mp4" />
             </video>
             
             <div className="absolute top-4 left-4 bg-tertiary text-white border-2 border-black px-4 py-1.5 font-display font-bold uppercase text-sm -rotate-2 tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] z-10">
@@ -114,7 +114,7 @@ export default function HomeScreen() {
             {/* Left: Custom Showcase Image */}
             <div className="relative w-full md:w-[45%] lg:w-[40%] border-b-4 md:border-b-0 md:border-r-4 border-black shrink-0 bg-stone-100">
               <img 
-                src="/Muchas Gracias To Go Order.webp" 
+                src="/muchas-gracias-to-go-order.webp" 
                 alt="Muchas Gracias To Go Order - Pickup Window & Delivery" 
                 className="w-full h-full object-cover min-h-[300px] md:min-h-full"
                 referrerPolicy="no-referrer"
