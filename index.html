@@ -21,10 +21,14 @@
     <meta name="twitter:description" content="Alberto's Crystal Cafe in Big Spring, Texas. Serving West Texas since 1974." />
     <meta name="twitter:image" content="https://albertoscrystalcafe.com/og-image.jpg" />
 
-    <!-- Performance: Preconnect to Google Fonts -->
+    <!-- Performance: Preconnect & Asynchronous Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Condensed:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo+Condensed:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Condensed:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Condensed:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
