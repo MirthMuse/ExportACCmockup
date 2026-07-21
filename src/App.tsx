@@ -71,8 +71,8 @@ function TopBar({ onMenuClick }: { onMenuClick: () => void }) {
         </Link>
       </div>
       <div className="flex items-center justify-end gap-2 sm:gap-3 shrink-0 pt-0.5 sm:pt-1">
-        <a href="tel:4322672310" className="bg-secondary text-black border-2 border-black p-1.5 sm:p-2 neo-shadow active-press transition-all hover:bg-primary hover:text-white" title="Call Us">
-          <Phone strokeWidth={2.5} className="w-4 h-4 sm:w-5 sm:h-5" />
+        <a href="tel:4322672310" aria-label="Call Alberto's Crystal Cafe at 432-267-2310" className="bg-secondary text-black border-2 border-black p-1.5 sm:p-2 neo-shadow active-press transition-all hover:bg-primary hover:text-white" title="Call Us">
+          <Phone strokeWidth={2.5} className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
         </a>
         <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" className="bg-primary text-white border-2 border-black px-3 py-1.5 sm:px-4 sm:py-2 font-display font-bold uppercase tracking-normal text-xs sm:text-sm neo-shadow active-press transition-all hover:bg-tertiary whitespace-nowrap">
           ORDER NOW
@@ -313,8 +313,8 @@ function FloatingActionMenu() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
               className="absolute pointer-events-auto"
             >
-              <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="bg-primary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-primary/90 transition-colors" title="Order Now">
-                <Car size={24} strokeWidth={2.5} className="text-white" />
+              <a href="https://online.skytab.com/s/albertos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} aria-label="Order food online" className="bg-primary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-primary/90 transition-colors" title="Order Now">
+                <Car size={24} strokeWidth={2.5} className="text-white" aria-hidden="true" />
               </a>
             </motion.div>
 
@@ -326,8 +326,8 @@ function FloatingActionMenu() {
               transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.05 }}
               className="absolute pointer-events-auto"
             >
-              <Link to="/menu" onClick={() => setIsOpen(false)} className="bg-secondary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-secondary/90 transition-colors" title="Menu">
-                <Utensils size={24} strokeWidth={2.5} className="text-black" />
+              <Link to="/menu" onClick={() => setIsOpen(false)} aria-label="View restaurant menu" className="bg-secondary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-secondary/90 transition-colors" title="Menu">
+                <Utensils size={24} strokeWidth={2.5} className="text-black" aria-hidden="true" />
               </Link>
             </motion.div>
 
@@ -339,8 +339,8 @@ function FloatingActionMenu() {
               transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
               className="absolute pointer-events-auto"
             >
-              <a href="tel:4322672310" onClick={() => setIsOpen(false)} className="bg-tertiary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-tertiary/90 transition-colors" title="Call Us">
-                <Phone size={24} strokeWidth={2.5} className="text-white" />
+              <a href="tel:4322672310" onClick={() => setIsOpen(false)} aria-label="Call Alberto's Crystal Cafe at 432-267-2310" className="bg-tertiary border-4 border-black w-14 h-14 rounded-full neo-shadow flex items-center justify-center hover:bg-tertiary/90 transition-colors" title="Call Us">
+                <Phone size={24} strokeWidth={2.5} className="text-white" aria-hidden="true" />
               </a>
             </motion.div>
           </>
@@ -353,6 +353,7 @@ function FloatingActionMenu() {
         onPointerLeave={cancelPress}
         onPointerMove={onPointerMove}
         onContextMenu={(e) => e.preventDefault()}
+        aria-label={isOpen ? "Close action menu" : "Back to top or hold for quick actions"}
         className="bg-white border-4 border-black w-16 h-16 rounded-full neo-shadow flex items-center justify-center active-press transition-all p-2 overflow-hidden pointer-events-auto select-none relative z-10"
         title="Push for top, Hold for menu"
         style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}

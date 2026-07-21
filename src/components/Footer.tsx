@@ -51,13 +51,31 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-display font-bold uppercase text-xl border-b-2 border-black inline-block pb-1">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/albertoscrystalcafe/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center neo-shadow hover:bg-secondary hover:-translate-y-1 transition-all">
-                <Facebook size={20} strokeWidth={2.5} />
+              <a 
+                href="https://www.facebook.com/albertoscrystalcafe/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Visit Alberto's Crystal Cafe on Facebook"
+                className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center neo-shadow hover:bg-secondary hover:-translate-y-1 transition-all"
+              >
+                <Facebook size={20} strokeWidth={2.5} aria-hidden="true" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center neo-shadow hover:bg-secondary hover:-translate-y-1 transition-all">
-                <Instagram size={20} strokeWidth={2.5} />
+              <a 
+                href="https://www.instagram.com/albertoscrystalcafe/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Visit Alberto's Crystal Cafe on Instagram"
+                className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center neo-shadow hover:bg-secondary hover:-translate-y-1 transition-all"
+              >
+                <Instagram size={20} strokeWidth={2.5} aria-hidden="true" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center neo-shadow hover:bg-secondary hover:-translate-y-1 transition-all font-display font-bold">
+              <a 
+                href="https://www.yelp.com/biz/albertos-crystal-cafe-big-spring" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Visit Alberto's Crystal Cafe on Yelp"
+                className="w-10 h-10 bg-white border-2 border-black flex items-center justify-center neo-shadow hover:bg-secondary hover:-translate-y-1 transition-all font-display font-bold"
+              >
                 Y!
               </a>
             </div>
