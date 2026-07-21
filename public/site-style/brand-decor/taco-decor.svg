@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Neo-brutalist Taco with thick outlines and brand colors -->
+  <path d="M10 65 C10 30, 90 30, 90 65 Z" fill="#F4C430" stroke="#000" stroke-width="4" stroke-linejoin="round" />
+  <!-- Filling/Lettuce/Meat -->
+  <path d="M15 65 C25 55, 35 60, 45 50 C55 60, 65 55, 75 62 C80 58, 85 65, 88 65" stroke="#E31B23" stroke-width="4" fill="#E31B23" />
+  <path d="M20 58 C30 48, 40 52, 50 42 C60 52, 70 48, 80 55" stroke="#3163A4" stroke-width="4" stroke-linecap="round" />
+  <!-- Fold line -->
+  <path d="M10 65 L90 65" stroke="#000" stroke-width="4" stroke-linecap="round" />
+</svg>

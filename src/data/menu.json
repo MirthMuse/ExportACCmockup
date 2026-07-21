@@ -1,0 +1,210 @@
+{
+  "categories": [
+    {
+      "category": "STARTERS",
+      "items": [
+        { "name": "SHRIMP COCKTAIL", "description": "Shrimp, Clamato, cilantro, onion, cucumber and jalapeños. Garnished with celery and lime.", "price": 13.95 },
+        { "name": "BACON JALAPEÑO WRAPS (5)", "description": "Stuffed with cream cheese and served with ranch.", "price": 11.95 },
+        { "name": "CHILE CON QUESO", "description": "Our classic spicy cheddar cheese melted with beef.", "price": 7.05 },
+        { "name": "QUESO BLANCO", "description": "Creamy white cheese with jalapeño peppers.", "price": 10.95 },
+        { "name": "Nachos - CHEESE", "description": "", "price": 9.95 },
+        { "name": "Nachos - BEAN", "description": "", "price": 10.95 },
+        { "name": "Nachos - GROUND BEEF", "description": "", "price": 11.95 },
+        { "name": "Nachos - FAJITA", "description": "Your choice of beef or chicken with beans and cheese.", "price": 13.05 },
+        { "name": "Nachos - SUPREME", "description": "Guacamole, lettuce, tomatoes, beans, onions and cheese.", "price": 12.95 },
+        { "name": "GUACAMOLE DIP", "description": "Made fresh daily.", "price": 7.85 },
+        { "name": "AVOCADO SLICES", "description": "", "price": 7.95 },
+        { "name": "FRIED PICKLES", "description": "Fresh hand-battered pickles served with ranch.", "price": 8.85 },
+        { "name": "CHEESE STICKS", "description": "Deep-fried mozzarella served with ranch.", "price": 9.95 },
+        { "name": "SALLY'S SAMPLER*", "description": "Half order of nachos with bean nachos, chile con queso and guacamole.", "price": 12.55 },
+        { "name": "BRISKET FRIES", "description": "Homestyle fries topped with brisket and choice of queso blanco or chile con queso.", "price": 13.95 },
+        { "name": "BRISKET NACHOS", "description": "Brisket with cheese.", "price": 13.95 }
+      ]
+    },
+    {
+      "category": "SALADS | SOUP",
+      "items": [
+        { "name": "TACO SALAD", "description": "A tortilla shell filled with romaine lettuce, tomatoes and shredded cheddar cheese topped with ground beef.", "price": 11.85 },
+        { "name": "COBB SALAD", "description": "Lettuce, tomatoes, cheese, a hard-boiled egg, bacon bits, avocado slices and chicken on a flat tortilla shell.", "price": 13.95 },
+        { "name": "FAJITA SALAD", "description": "Your choice of chicken or beef with lettuce, onions, bell peppers, tomatoes and cheese on a flat tortilla shell.", "price": 12.95 },
+        { "name": "LOADED POTATO SOUP", "description": "Potatoes, bacon, cheese and green onions with sour cream on the side. Comes with a side salad.", "price": 12.95 }
+      ]
+    },
+    {
+      "category": "Legacy Selection",
+      "items": [
+        { "name": "RANCHERO-STYLE RIBEYE STEAK", "description": "Topped with ranchero sauce. Served with a salad, rice, beans and tortillas.", "price": 35.95 },
+        { "name": "RIBEYE STEAK", "description": "Served with a salad, French fries and a roll.", "price": 34.95 },
+        { "name": "HAMBURGER STEAK", "description": "Topped with brown gravy and grilled onions. Served with a salad, French fries and a roll.", "price": 15.95 },
+        { "name": "CHICKEN BREAST", "description": "Topped with jalapeño cream sauce. Served with cheesy squash medley, roasted corn, a roll and a salad.", "price": 15.05 },
+        { "name": "CHICKEN FRIED STEAK", "description": "Topped with cream gravy. Served with a salad, French fries and a roll.", "price": 15.95 },
+        { "name": "CHICKEN TENDERS", "description": "Hand battered and served with a salad, French fries, a roll and cream gravy.", "price": 12.85 },
+        { "name": "QUESADILLA", "description": "Filled with choice of fajita chicken or beef with sautéed bell peppers and onions. Served with guacamole and pico de gallo.", "price": 12.95 },
+        { "name": "BRISKET QUESADILLA", "description": "", "price": 13.95 },
+        { "name": "VEGGIE QUESADILLA", "description": "", "price": 11.95 },
+        { "name": "MAHI MAHI", "description": "Topped with jalapeño cream sauce, cheesy squash medley, roasted corn, a roll and a salad.", "price": 16.95 }
+      ]
+    },
+    {
+      "category": "BURGERS",
+      "items": [
+        { "name": "HAMBURGER", "description": "Served with chips or French fries.", "price": 11.95 },
+        { "name": "CHEESEBURGER", "description": "Served with chips or French fries.", "price": 12.95 },
+        { "name": "BACON HAMBURGER", "description": "Served with chips or French fries.", "price": 13.25 },
+        { "name": "BACON CHEESEBURGER", "description": "Served with chips or French fries.", "price": 13.75 },
+        { "name": "JALAPEÑO HAMBURGER", "description": "Served with chips or French fries.", "price": 12.95 },
+        { "name": "JALAPEÑO CHEESEBURGER", "description": "Served with chips or French fries.", "price": 13.50 },
+        { "name": "BACON JALAPEÑO CHEESEBURGER", "description": "Served with chips or French fries.", "price": 13.55 }
+      ]
+    },
+    {
+      "category": "FAJITAS",
+      "items": [
+        { "name": "CHICKEN, BEEF OR COMBINATION", "description": "Served with rice, beans, guacamole, pico de gallo and tortillas.", "price": 17.95 },
+        { "name": "SHRIMP FAJITAS", "description": "Served with rice, beans, guacamole, pico de gallo and tortillas.", "price": 18.95 },
+        { "name": "ONE POUND FAJITAS", "description": "Chicken, beef or shrimp served with onions and bell peppers.", "price": 34.95 },
+        { "name": "VEGGIE FAJITAS", "description": "", "price": 12.35 }
+      ]
+    },
+    {
+      "category": "TACOS",
+      "items": [
+        { "name": "GROUND BEEF TACOS", "description": "Three per plate. Served with rice and beans.", "price": 11.95 },
+        { "name": "SHREDDED CHICKEN TACOS", "description": "Three per plate. Served with rice and beans.", "price": 11.95 },
+        { "name": "FAJITA CHICKEN TACOS", "description": "Three per plate. Served with rice and beans.", "price": 13.95 },
+        { "name": "FAJITA BEEF TACOS", "description": "Three per plate. Served with rice and beans.", "price": 13.05 },
+        { "name": "BRISKET TACOS", "description": "Three per plate. Served with rice and beans.", "price": 14.95 }
+      ]
+    },
+    {
+      "category": "BURRITOS",
+      "items": [
+        { "name": "CHICKEN FAJITA BURRITO", "description": "", "price": 12.95 },
+        { "name": "BEEF FAJITA BURRITO", "description": "Served with guacamole, pico de gallo, rice and beans.", "price": 12.95 },
+        { "name": "GROUND BEEF BURRITO", "description": "", "price": 6.95 },
+        { "name": "STEW MEAT BURRITO", "description": "", "price": 6.95 },
+        { "name": "COMBINATION BURRITO", "description": "", "price": 7.25 },
+        { "name": "BEAN BURRITO", "description": "", "price": 5.95 }
+      ]
+    },
+    {
+      "category": "ENCHILADAS",
+      "items": [
+        { "name": "CHEESE ENCHILADAS", "description": "Three per plate. Served with rice and beans.", "price": 11.95 },
+        { "name": "BEEF ENCHILADAS", "description": "Three per plate. Served with rice and beans.", "price": 11.95 },
+        { "name": "CHICKEN ENCHILADAS", "description": "Three per plate. Served with rice and beans.", "price": 11.95 },
+        { "name": "TRIO ENCHILADAS", "description": "Three per plate. Served with rice and beans.", "price": 11.95 }
+      ]
+    },
+    {
+      "category": "TAMALES",
+      "items": [
+        { "name": "TAMALE PLATE (3)", "description": "Served with rice and beans.", "price": 11.95 },
+        { "name": "TAMALE PLATE (3) WITH CHILI", "description": "Served with rice and beans.", "price": 12.95 }
+      ]
+    },
+    {
+      "category": "PLATTERS",
+      "items": [
+        { "name": "HOUSE SPECIAL", "description": "One green beef enchilada, one beef chile relleno, one guacamole chalupa and one taco.", "price": 11.35 },
+        { "name": "CHILE RELLENOS", "description": "Two Anaheim peppers stuffed with ground beef topped with relleno sauce, rice and beans.", "price": 12.85 },
+        { "name": "MEXICAN DINNER", "description": "One red cheese enchilada, one beef taco, Spanish rice and refried beans.", "price": 11.05 },
+        { "name": "ALBERTO'S SPECIAL", "description": "Chopped stew meat with rice, beans and choice of two flour or corn tortillas.", "price": 12.95 },
+        { "name": "CHICKEN FLAUTAS", "description": "Two flautas served with rice, beans and chipotle sauce.", "price": 12.95 },
+        { "name": "MACHO PLATE", "description": "One stew meat burrito with green sauce, one chile relleno, one taco, one tamale with chili, rice and beans.", "price": 14.95 },
+        { "name": "PLATILLO RODRIGUEZ", "description": "One red cheese enchilada, one taco, one queso chalupa, one tamale with chili, rice and beans.", "price": 13.95 },
+        { "name": "GORDITA PLATTER", "description": "Two handmade gorditas stuffed with choice of ground beef, potato or beans with cheese. Served with rice and beans.", "price": 13.05 },
+        { "name": "GORDITA (Single)", "description": "", "price": 5.85 },
+        { "name": "CHIMICHANGA", "description": "Deep-fried burrito stuffed with shredded chicken or ground beef topped with choice of sauce. Served with rice and beans.", "price": 12.95 }
+      ]
+    },
+    {
+      "category": "CHILD'S PLATE",
+      "items": [
+        { "name": "CHILD'S MEXICAN DINNER", "description": "An enchilada or taco served with Spanish rice and refried beans.", "price": 7.95 },
+        { "name": "CHEESE QUESADILLA", "description": "Served with French fries.", "price": 7.95 },
+        { "name": "GRILLED CHEESE", "description": "Served with French fries or chips.", "price": 7.15 },
+        { "name": "CHICKEN TENDERS", "description": "Served with French fries and gravy.", "price": 7.55 }
+      ]
+    },
+    {
+      "category": "BRUNCH",
+      "items": [
+        { "name": "MENUDO", "description": "Available Saturday and Sunday only. Served with tortillas or crackers.", "price": 13.85 },
+        { "name": "PETE'S PANCAKES", "description": "Two pancakes served with eggs and choice of bacon, ham or sausage.", "price": 11.95 },
+        { "name": "EGGS RANCHERO", "description": "Served with potatoes, beans, tortillas and choice of bacon, ham or sausage.", "price": 12.05 },
+        { "name": "PORK CHOP", "description": "Served with eggs, beans, potatoes and tortillas.", "price": 13.85 },
+        { "name": "BISCUITS AND GRAVY", "description": "Served with bacon, ham or sausage.", "price": 10.95 },
+        { "name": "FRENCH TOAST", "description": "Served with eggs and choice of bacon, ham or sausage.", "price": 11.85 },
+        { "name": "TWO EGG BREAKFAST", "description": "Choice of bacon, ham or sausage served with potatoes and toast.", "price": 10.00 },
+        { "name": "BREAKFAST BURRITO", "description": "Choice of up to three: beans, cheese, egg, potato, bacon, sausage, chorizo or ham.", "price": 6.95 },
+        { "name": "BREAKFAST QUESADILLA", "description": "Two tortillas filled with cheese, eggs, potatoes and choice of bacon, ham or sausage.", "price": 11.95 }
+      ]
+    },
+    {
+      "category": "DESSERTS",
+      "items": [
+        { "name": "ICE CREAM SCOOP", "description": "", "price": 2.95 },
+        { "name": "SOPAPILLAS (5)", "description": "", "price": 7.95 },
+        { "name": "CARAMEL CHOCOLATE BROWNIE", "description": "Made with a pretzel crust.", "price": 7.95 },
+        { "name": "NEW YORK CHEESECAKE", "description": "Rich and creamy cheesecake.", "price": 7.05 }
+      ]
+    },
+    {
+      "category": "A LA CARTE",
+      "items": [
+        { "name": "PANCAKE", "description": "", "price": 4.95 },
+        { "name": "BISCUIT", "description": "", "price": 3.95 },
+        { "name": "PORK CHOP", "description": "", "price": 7.95 },
+        { "name": "SAUSAGE", "description": "", "price": 3.95 },
+        { "name": "BACON (2)", "description": "", "price": 3.85 },
+        { "name": "HAM (2)", "description": "", "price": 3.95 },
+        { "name": "BREAKFAST POTATOES", "description": "", "price": 3.95 },
+        { "name": "EGG", "description": "", "price": 1.25 },
+        { "name": "TOAST", "description": "", "price": 1.95 }
+      ]
+    },
+    {
+      "category": "BEVERAGES",
+      "items": [
+        { "name": "SOFT DRINKS", "description": "Coke, Diet Coke, Dr Pepper, Sprite, Barq's Root Beer, Red Flash, Pink Lemonade (Free refills)", "price": 2.95 },
+        { "name": "LARGE SOFT DRINK (32 oz)", "description": "", "price": 3.75 },
+        { "name": "ICED TEA", "description": "Sweet or unsweet (Free refills)", "price": 2.95 },
+        { "name": "LARGE ICED TEA (32 oz)", "description": "", "price": 3.75 },
+        { "name": "COFFEE", "description": "Free refills", "price": 2.95 },
+        { "name": "LARGE COFFEE (32 oz)", "description": "", "price": 3.75 },
+        { "name": "JUICE", "description": "Orange or Apple", "price": 2.95 },
+        { "name": "LARGE JUICE (32 oz)", "description": "", "price": 3.75 },
+        { "name": "MILK", "description": "", "price": 2.95 },
+        { "name": "LARGE MILK (32 oz)", "description": "", "price": 3.75 },
+        { "name": "BOTTLED DRINKS", "description": "Coke, Orange Fanta, Strawberry Fanta, Topo Chico", "price": 3.95 },
+        { "name": "JARRITOS", "description": "Pineapple, Manzana, Fruit Punch, Lime, Guava, Tamarind", "price": 3.95 }
+      ]
+    },
+    {
+      "category": "ADD-ONS",
+      "items": [
+        { "name": "Add protein to Nachos", "description": "Fajita beef, fajita chicken, ground beef or brisket.", "price": 2.00 },
+        { "name": "Add Shrimp to Fajitas", "description": "", "price": 5.00 },
+        { "name": "Smother Sauce", "description": "Red, green, queso sauce, queso blanco, ranchero or sour cream sauce.", "price": 3.00 },
+        { "name": "EXTRA ENCHILADA", "description": "", "price": 4.00 },
+        { "name": "DIPPING SAUCES", "description": "Chipotle Cream, Cilantro Cream or Tomatillo Salsa.", "price": 1.00 },
+        { "name": "Extra Patty", "description": "", "price": 3.00 },
+        { "name": "Add guacamole or avocado", "description": "", "price": 2.00 },
+        { "name": "Add chocolate or strawberries", "description": "", "price": 1.00 }
+      ]
+    },
+    {
+      "category": "PARTY PACKS",
+      "items": [
+        { "name": "Taco Pack", "description": "30 Tacos (Beef + Chicken) with Rice + Beans", "price": 85.00 },
+        { "name": "Enchilada Pack", "description": "30 Enchiladas (Mix and Match 3 Kinds) with Rice + Beans", "price": 85.00 },
+        { "name": "Taco & Enchilada Pack", "description": "20 Tacos and 20 Enchiladas with Rice + Beans", "price": 100.00 },
+        { "name": "Fajitas Party", "description": "20 Fajitas (10 lbs) with Tortillas, Peppers & Onions, and Salsa", "price": 275.00 },
+        { "name": "Combo Platter", "description": "10 Cheesesticks, 10 Wings, 6 Egg Rolls, and 10 Wraps", "price": 75.00 },
+        { "name": "50 Wings Pack", "description": "50 Wings with Fries (Mix and Match)", "price": 85.00 },
+        { "name": "30 Wings Pack", "description": "30 Wings with Fries", "price": 65.00 }
+      ]
+    }
+  ]
+}

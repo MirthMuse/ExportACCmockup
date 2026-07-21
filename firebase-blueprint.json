@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "Signups": {
+      "title": "Rewards Signup",
+      "description": "User signups for the rewards program",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the user"
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the user"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the user"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["name", "email", "phone", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/signups/{signupId}": {
+      "schema": {
+        "$ref": "#/entities/Signups"
+      },
+      "description": "Stores user signups for the rewards program"
+    }
+  }
+}
